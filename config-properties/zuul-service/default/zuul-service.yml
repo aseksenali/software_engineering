@@ -9,3 +9,11 @@ zuul:
       path: /account/**
       service-id: account-service
   ignored-services: "*"
+
+hystrix:
+  command:
+    account-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
