@@ -1,11 +1,14 @@
 zuul:
+  ignoreSecurityHeaders: false
   routes:
     auth-service:
       strip-prefix: false
-      sensitive-headers: Cookie,Set-Cookie, Authorization
+      sensitive-headers: Cookie,Set-Cookie
       path: /auth/**
       service-id: security-service
     account-service:
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
       path: /account/**
       service-id: account-service
   ignored-services: "*"
