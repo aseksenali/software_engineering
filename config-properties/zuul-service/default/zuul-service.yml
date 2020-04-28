@@ -5,6 +5,6 @@ zuul:
       sensitive-headers: Cookie,Set-Cookie  # Exclude authorization from sensitive headers
       path: /auth/**   # Map path to auth service
       service-id: security-service
-    gallery-service:
+    account-service:
       path: /account/**  # Map paths to gallery service
       service-id: account-service
