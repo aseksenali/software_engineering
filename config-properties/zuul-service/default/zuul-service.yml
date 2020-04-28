@@ -2,9 +2,10 @@ zuul:
   routes:
     auth-service:
       strip-prefix: false
-      sensitive-headers: Cookie,Set-Cookie  # Exclude authorization from sensitive headers
-      path: /auth/**   # Map path to auth service
+      sensitive-headers: Cookie,Set-Cookie
+      path: /auth/**
       service-id: security-service
     account-service:
-      path: /account/**  # Map paths to gallery service
+      path: /account/**
       service-id: account-service
+  ignored-services: "*"
