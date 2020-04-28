@@ -7,6 +7,6 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
   main:
     allow-bean-definition-overriding: true
