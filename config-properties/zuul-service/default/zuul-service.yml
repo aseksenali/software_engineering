@@ -2,7 +2,7 @@ zuul:
   routes:
     auth-service:
       strip-prefix: false
-      sensitive-headers: Cookie,Set-Cookie
+      sensitive-headers: Cookie,Set-Cookie, Authorization
       path: /auth/**
       service-id: security-service
     account-service:
