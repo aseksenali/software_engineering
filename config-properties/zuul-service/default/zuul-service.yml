@@ -1,0 +1,23 @@
+zuul:
+  ignoreSecurityHeaders: false
+  routes:
+    auth-service:
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
+      ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+      path: /auth/**
+      service-id: security-service
+    account-service:
+      sensitive-headers: Cookie,Set-Cookie
+      ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+      path: /account/**
+      service-id: account-service
+  ignored-services: "*"
+
+hystrix:
+  command:
+    account-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
