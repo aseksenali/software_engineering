@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: security-service
+  cloud:
+    config:
+      uri: http://192.168.118.194:8888
+server:
+  port: 9100
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://192.168.118.194:8761/eureka}
+  instance:
+    preferIpAddress: true

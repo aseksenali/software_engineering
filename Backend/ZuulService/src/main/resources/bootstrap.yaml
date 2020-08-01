@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: zuul-service
+  cloud:
+    config:
+      uri: http://192.168.118.194:8888
+server:
+  port: 8766
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.118.194:8761/eureka
+  instance:
+    preferIpAddress: true

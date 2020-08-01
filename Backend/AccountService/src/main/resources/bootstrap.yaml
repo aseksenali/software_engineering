@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: account-service
+  cloud:
+    config:
+      uri: http://192.168.118.194:8888
+server:
+  port: 8080
+axon:
+  axonserver:
+    servers: 192.168.118.194
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://192.168.118.194:8761/eureka}
+  instance:
+    preferIpAddress: true
