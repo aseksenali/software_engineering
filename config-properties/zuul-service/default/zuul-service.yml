@@ -1,18 +1,13 @@
 zuul:
   ignoreSecurityHeaders: false
   routes:
-    auth-service:
+    my-hello-world:
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
       ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
-      path: /auth/**
-      service-id: security-service
-    account-service:
-      sensitive-headers: Cookie,Set-Cookie
-      ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
-      path: /account/**
-      service-id: account-service
-  ignored-services: "*"
+      path: /hello/**
+      service-id: my-hello-world
+    ignored-services: "*"
 
 hystrix:
   command:
