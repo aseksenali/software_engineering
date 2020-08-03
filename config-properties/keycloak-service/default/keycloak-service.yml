@@ -1,0 +1,8 @@
+keycloak:
+  auth-server-url: http://192.168.15.77:8080
+  ssl-required: external
+  public-client: true
+  realm: ABC-Store
+  resource: web-application
+  principal-attribute: preferred_username
+  cors: true

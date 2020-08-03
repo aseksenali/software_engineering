@@ -7,7 +7,11 @@ zuul:
       ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
       path: /hello/**
       service-id: my-hello-world
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 hystrix:
   command:
     account-service:
