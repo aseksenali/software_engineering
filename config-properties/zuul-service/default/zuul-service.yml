@@ -2,9 +2,6 @@ zuul:
   ignoreSecurityHeaders: false
   routes:
     hello-world:
-      strip-prefix: false
-      sensitive-headers: Cookie,Set-Cookie
-      ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
       path: /hello/**
       service-id: hello-world
 management:
