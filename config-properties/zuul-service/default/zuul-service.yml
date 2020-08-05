@@ -1,5 +1,6 @@
 zuul:
   ignoreSecurityHeaders: false
+  prefix: /api
   routes:
     hello-world:
       path: /hello/**
