@@ -5,6 +5,7 @@ zuul:
     hello-world:
       path: /hello/**
       service-id: hello-world
+  ignoredServices: '*'
 management:
   endpoints:
     web:
